@@ -5,6 +5,7 @@ class Song
   attr_reader :artist
   extend Memorable   # Extend means it is a class method.
   extend Findable
+  include Paramable
   @@songs = []
 
   def initialize
