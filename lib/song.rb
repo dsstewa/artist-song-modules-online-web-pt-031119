@@ -3,9 +3,9 @@ require 'pry'
 class Song
   attr_accessor :name
   attr_reader :artist
-  extend Memorable   # Extend means it is a class method.
+  extend Memorable::ClassMethods
   extend Findable::ClassMethods
-  include Paramable
+  include Paramable::InstanceMethods
   @@songs = []
 
   def initialize
